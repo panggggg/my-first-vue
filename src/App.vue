@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img src="https://i.pinimg.com/564x/c3/16/38/c31638c3cb9358739d86d4d1ce009d0f.jpg" width=300 />
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <example/>
+    <test/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import HelloWorld from './components/HelloWorld.vue'
 import Example from './components/Example.vue'
+import Test from './components/Test.vue'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
@@ -21,7 +23,8 @@ export default {
   name: 'App',
   components: {
     HelloWorld,
-    Example
+    Example,
+    Test
   }
 }
 </script>
