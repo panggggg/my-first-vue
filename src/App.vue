@@ -4,6 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <example/>
     <test/>
+    <employee/>
   </div>
 </template>
 
@@ -16,6 +17,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import HelloWorld from './components/HelloWorld.vue'
 import Example from './components/Example.vue'
 import Test from './components/Test.vue'
+import Employee from './components/Employee.vue'
+
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
@@ -24,7 +27,8 @@ export default {
   components: {
     HelloWorld,
     Example,
-    Test
+    Test,
+    Employee
   }
 }
 </script>
