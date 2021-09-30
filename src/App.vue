@@ -5,6 +5,7 @@
     <example/>
     <test/>
     <employee/>
+    <member/>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Example from './components/Example.vue'
 import Test from './components/Test.vue'
 import Employee from './components/Employee.vue'
+import Member from './components/Member.vue'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
@@ -28,7 +30,8 @@ export default {
     HelloWorld,
     Example,
     Test,
-    Employee
+    Employee,
+    Member
   }
 }
 </script>
