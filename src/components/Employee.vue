@@ -1,6 +1,6 @@
 <template>
     <div class="employee">
-        <p>Employee</p>
+        <h1>Employee</h1>
         <div class="container">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">EmployeeID</span>
