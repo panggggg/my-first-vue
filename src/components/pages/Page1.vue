@@ -27,7 +27,7 @@ export default {
             this.studentInfo = info.filter(name => name.Fname.includes(this.$route.params.name))
             this.studentInfo = info.filter(last => last.Lname.includes(this.$route.params.last))
             this.studentInfo = info.filter(lv => lv.Lv.includes(this.$route.params.lv))
-            
+            this.studentInfo = info.filter(gender => gender.gender.includes(this.$route.params.gender))
         })
         .catch(err => console.log(err.message));
 
