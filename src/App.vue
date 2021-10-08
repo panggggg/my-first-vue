@@ -1,40 +1,12 @@
 <template>
   <div id="app">
-    <img src="https://i.pinimg.com/564x/c3/16/38/c31638c3cb9358739d86d4d1ce009d0f.jpg" width=300 />
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <example/>
-    <test/>
-    <employee/>
-    <member/>
+    <div id="nav">
+      <router-link to="/">Student</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-
-import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import HelloWorld from './components/HelloWorld.vue'
-import Example from './components/Example.vue'
-import Test from './components/Test.vue'
-import Employee from './components/Employee.vue'
-import Member from './components/Member.vue'
-
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    Example,
-    Test,
-    Employee,
-    Member
-  }
-}
-</script>
 
 <style>
 #app {
@@ -43,6 +15,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
