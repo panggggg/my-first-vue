@@ -1,18 +1,48 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <h1>Home</h1>
+      <div class="container">
+      <!-- <form> -->
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">ID</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="exampleInputPassword1"
+            placeholder="ID"
+            v-model="id">
+        </div>
+        <button type="submit" class="btn btn-primary" @click="addUser">Add</button>
+      <!-- </form> -->
+      </div>
+      <br>
+      <div class="container">
+      <b-table striped hover :items="users"></b-table>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+    data() {
+      return {
+        id : null
+      };
+    },
+    methods: {
+      addUser(){
+        this.$store.dispatch('setCurrentUser', this.id);
+      }
+    },
+    computed: {
+      users(){
+        console.log(this.$store.getters.getUser)
+        return this.$store.getters.getUser
+      }
+    }
 }
 </script>

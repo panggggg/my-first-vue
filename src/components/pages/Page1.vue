@@ -23,11 +23,12 @@ export default {
         .get('https://mocki.io/v1/423b4c07-dc19-4a17-94f8-fd8d2b0484b8')
         .then(res => {
             const info = res.data
-            this.studentInfo = info.filter(id => id.Fname.includes(this.$route.params.id))
-            this.studentInfo = info.filter(name => name.Fname.includes(this.$route.params.name))
-            this.studentInfo = info.filter(last => last.Lname.includes(this.$route.params.last))
-            this.studentInfo = info.filter(lv => lv.Lv.includes(this.$route.params.lv))
-            this.studentInfo = info.filter(gender => gender.gender.includes(this.$route.params.gender))
+            this.studentInfo =  info.filter((info) => info.id === this.$route.params.id,
+                                                    info.Fname === this.$route.params.name,
+                                                    info.Lname === this.$route.params.last,
+                                                    info.gender === this.$route.params.gender,
+                                                    info.Lv === this.$route.params.lv
+                                                    )
         })
         .catch(err => console.log(err.message));
 

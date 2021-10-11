@@ -29,7 +29,7 @@
             <input type="submit" value="Submit"/>
             <br>
         </form>
-        <button @click="allInfo">ดูรายชื่อทั้งหมด</button>
+        <b-button variant="warning" @click="allInfo">ดูรายชื่อทั้งหมด</b-button>
     </div>
 </template>
 
@@ -82,6 +82,7 @@ export default {
           router.push(`/page1/${this.id}/${this.firstName}/${this.lastName}/${this.selected}/${this.gender}`)
           router.go()
       }
+
       console.log(this.selected)
       e.preventDefault();
     },
