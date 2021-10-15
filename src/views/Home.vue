@@ -21,7 +21,7 @@
       <b-table striped hover :items="users"></b-table>
       </div>
     </div>
-    <div class="container">
+    <div class="container" :style="{backgroundColor: '#AC65B9'}">
       <h1>Student Info</h1>
        <div class="input-group mb-3">
                 <span class="input-group-text" >Student ID</span>
