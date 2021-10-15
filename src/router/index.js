@@ -7,6 +7,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 import Home from '../views/Home'
 import Page1 from '../components/pages/Page1'
 import Page2 from '../components/pages/Page2'
+import Student from '../views/Student'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
@@ -26,6 +27,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/Student',
+    name: 'Student',
+    component: Student
   },
   {
     path: '/page1/:id/:name/:last/:lv/:gender',

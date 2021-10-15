@@ -9,7 +9,9 @@ const headers = { Accecpt : "application/json" }
 export default new Vuex.Store({
   state: {
     currentUser : [],
-    allUsers : []
+    allUsers : [],
+    student: [],
+    allStudents: []
   },
   mutations: {
     setCurrentUser(state, payload) {
@@ -18,6 +20,10 @@ export default new Vuex.Store({
       }
       state.currentUser.push(payload)
       state.allUsers.push(payload)
+    },
+    setStudent(state, data){
+      state.student.push(data)
+      state.allStudents.push(data)
     }
   },
   actions: {
@@ -25,11 +31,16 @@ export default new Vuex.Store({
       const user = await fetch(url + payload, { headers })
       const data = await user.json()
       state.commit('setCurrentUser', data)
+    },
+    setStudent(state, data){
+      state.commit('setStudent', data)
     }
   },
   getters: {
     getUser : state => state.currentUser,
-    getAllUsers : state => state.allUsers
+    getAllUsers : state => state.allUsers,
+    getStudent: state => state.student,
+    getAllStudents: state => state.allStudents
   },
 
 })
